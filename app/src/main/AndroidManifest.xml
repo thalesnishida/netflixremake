@@ -13,6 +13,12 @@
         android:theme="@style/Theme.NetflixRemake"
         tools:targetApi="31">
         <activity
+            android:name=".MovieActivity"
+            android:exported="true" >
+
+
+        </activity>
+        <activity
             android:name=".SplashTest"
             android:exported="true"
             android:theme="@style/SplashTest">
@@ -24,9 +30,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

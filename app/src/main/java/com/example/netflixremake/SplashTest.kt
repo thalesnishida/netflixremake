@@ -17,7 +17,7 @@ class SplashTest : AppCompatActivity() {
         val iv: ImageView = findViewById(R.id.iv_note)
         iv.alpha = 0f
         iv.animate().setDuration(1500).alpha(1f).withEndAction(){
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, MovieActivity::class.java)
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             finish()
