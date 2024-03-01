@@ -3,4 +3,6 @@
     <string name="cast">Elenco: %1$s</string>
     <string name="similar">Opções semelhantes</string>
     <string name="imagem_do_filme">Imagem do filme</string>
+    <string name="button_player">button player</string>
+    <string name="image_movie">Image movie</string>
 </resources>

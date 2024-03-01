@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), CategoryTask.Callback{
         progress = findViewById(R.id.progress_main)
 
         CategoryTask(this)
-            .execute("")
+            .execute("https://api.tiagoaguiar.co/netflixapp/home?apiKey=747aaddf-5dd5-493d-aee1-6152b40b595a")
 
         adapter = CategoryAdpater(categories) { id ->
             val intent = Intent(this@MainActivity, MovieActivity::class.java)
