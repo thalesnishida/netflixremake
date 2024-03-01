@@ -3,14 +3,14 @@ package com.example.netflixremake
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.netflixremake.model.Category
-import com.example.netflixremake.model.Movie
 
-class CategoryAdpater(private val categories: List<Category>): RecyclerView.Adapter<CategoryAdpater.CategoryViewHolder>(){
+class CategoryAdpater(private val categories: List<Category>,
+    private val onItemClickListener: (Int) -> Unit
+    ): RecyclerView.Adapter<CategoryAdpater.CategoryViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.category_item, parent, false)
@@ -33,7 +33,7 @@ class CategoryAdpater(private val categories: List<Category>): RecyclerView.Adap
 
             val rvCategory = itemView.findViewById<RecyclerView>(R.id.rv_category)
             rvCategory.layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
-            rvCategory.adapter = MovieAdpater(categories.movies)
+            rvCategory.adapter = MovieAdpater(categories.movies, R.layout.movie_item, onItemClickListener)
         }
 
     }
