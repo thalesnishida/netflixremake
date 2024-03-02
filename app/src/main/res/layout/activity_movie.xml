@@ -13,12 +13,6 @@
         android:background="@color/black"
         tools:context=".MovieActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/movie_toolbar"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
         <ImageView
             android:id="@+id/image_movie"
@@ -29,6 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:contentDescription="@string/image_movie" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/movie_toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
         <ImageView
             app:layout_constraintTop_toTopOf="@id/image_movie"
